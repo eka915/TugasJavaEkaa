@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class KasirSederhana {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        // Inisialisasi variabel di luar loop (sesuai hint di gambar)
+        int total = 0;
+        char lagi = 'y';
+        
+        System.out.println("=== Program Kasir Sederhana ===");
+        
+        // Loop akan berjalan selama variabel lagi bernilai 'y'
+        while (lagi == 'y' || lagi == 'Y') {
+            
+            // 1. Meminta user memasukkan harga barang
+            System.out.print("Masukkan harga barang: ");
+            int harga = input.nextInt();
+            
+            // Menghitung total (total = total + harga)
+            total += harga;
+            
+            // 2. Bertanya apakah ada barang lagi
+            System.out.print("Ada barang lagi? (y/n): ");
+            lagi = input.next().charAt(0);
+        }
+        
+        // 4. Jika 'n', tampilkan Total Harga
+        System.out.println("----------------------------");
+        System.out.println("Total Harga: Rp " + total);
+        System.out.println("Terima kasih!");
+        
+        input.close();
+    }
+}
