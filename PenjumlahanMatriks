@@ -1,0 +1,57 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.ekabelajarjava;
+
+/**
+ *
+ * @author Hype GLK
+ */
+public class PenjumlahanMatriks {
+    public static void main(String[] args) {
+        // 1. Buat dua array 2D (Matriks A dan Matriks B) ukuran 2x2
+        int[][] matriksA = {
+            {1, 2},
+            {3, 4}
+        };
+
+        int[][] matriksB = {
+            {5, 6},
+            {7, 8}
+        };
+
+        // 3. Buat array ketiga untuk menampung hasil penjumlahan
+        int[][] matriksHasil = new int[2][2];
+
+        // Proses Penjumlahan
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                matriksHasil[i][j] = matriksA[i][j] + matriksB[i][j];
+            }
+        }
+
+        // 4. Tampilkan Matriks A
+        System.out.println("Matriks A:");
+        tampilkanMatriks(matriksA);
+
+        // Tampilkan Matriks B
+        System.out.println("\nMatriks B:");
+        tampilkanMatriks(matriksB);
+
+        // Tampilkan Hasil Penjumlahan
+        System.out.println("\nHasil Penjumlahan:");
+        tampilkanMatriks(matriksHasil);
+    }
+
+    // Helper method untuk menampilkan matriks agar kode lebih rapi
+    public static void tampilkanMatriks(int[][] matriks) {
+        for (int i = 0; i < matriks.length; i++) {
+            for (int j = 0; j < matriks[0].length; j++) {
+                System.out.print(matriks[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
