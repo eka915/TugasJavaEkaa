@@ -1,0 +1,27 @@
+public class Laptop {
+    // 1. Atribut
+    public String merk;
+    public int harga;
+    public String warna;
+
+    // 2. Constructor untuk mengisi ketiga atribut
+    public Laptop(String merk, int harga, String warna) {
+        this.merk = merk;
+        this.harga = harga;
+        this.warna = warna;
+    }
+
+    // 3. Method tampilSpek()
+    public void tampilSpek() {
+        System.out.println("Merk  : " + merk);
+        System.out.println("Warna : " + warna);
+        System.out.println("Harga : Rp" + harga);
+        System.out.println("-------------------------");
+    }
+
+    // 4. Method diskon(int persen) yang mengembalikan nilai (return int)
+    public int diskon(int persen) {
+        int hargaDiskon = harga - (harga * persen / 100);
+        return hargaDiskon;
+    }
+}
