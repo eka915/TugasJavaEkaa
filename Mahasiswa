@@ -1,0 +1,37 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.latihanpertemuan1;
+
+/**
+ *
+ * @author Hype GLK
+ */
+public class Mahasiswa {
+    // 1. Atribut (Ciri-ciri / Variabel)
+    // Tidak pakai 'static' karena milik masing-masing object
+    public String nama;
+    public String nim;
+    public double ipk;
+
+    // 2. Constructor (Metode khusus untuk inisialisasi object)
+    // Nama harus SAMA dengan nama class, tidak ada Return Type
+    public Mahasiswa(String nama, String nim, double ipk) {
+        this.nama = nama; // this.nama = atribut class, nama = parameter
+        this.nim = nim;
+        this.ipk = ipk;
+    }
+
+    // 3. Method (Perilaku / Tingkah Laku)
+    public void tampilInfo() {
+        System.out.println("NIM  : " + nim);
+        System.out.println("Nama : " + nama);
+        System.out.println("IPK  : " + ipk);
+        System.out.println("-------------------------");
+    }
+
+    public void belajar() {
+        System.out.println(nama + " sedang belajar Java OOP.");
+    }
+}
