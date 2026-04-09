@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Perpustakaan {
+
+    // Daftar buku menggunakan Array (Global agar bisa diakses semua method)
+    static String[] daftarBuku = {"Java OOP", "Struktur Data", "Basis Data", "Jaringan Komputer", "Sistem Operasi"};
+
+    // 1. Method untuk menampilkan 5 judul buku
+    public static void tampilDaftarBuku() {
+        System.out.println("=== Daftar Buku Perpustakaan ===");
+        for (int i = 0; i < daftarBuku.length; i++) {
+            System.out.println((i + 1) + ". " + daftarBuku[i]);
+        }
+        System.out.println("--------------------------------");
+    }
+
+    // 2. Method untuk mencari buku (mengembalikan boolean)
+    public static boolean cariBuku(String judul) {
+        for (String buku : daftarBuku) {
+            // Menggunakan equalsIgnoreCase agar besar/kecil huruf tidak masalah
+            if (buku.equalsIgnoreCase(judul)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // 3. Main Method
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Menampilkan daftar buku
+        tampilDaftarBuku();
+
+        // Minta user input judul buku yang dicari
+        System.out.print("Masukkan judul buku yang ingin dicari: ");
+        String judulDicari = input.nextLine();
+
+        // Panggil method cariBuku dan tampilkan pesan
+        if (cariBuku(judulDicari)) {
+            System.out.println("Hasil: Buku tersedia.");
+        } else {
+            System.out.println("Hasil: Buku tidak ditemukan.");
+        }
+
+        input.close();
+    }
+}
